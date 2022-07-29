@@ -70,3 +70,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'devise', github: 'heartcombo/devise', branch: 'main'
+gem 'simple_form', '~> 5.1'
