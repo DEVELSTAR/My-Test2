@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
-
 <%= render @post %>
+  <p> created by: <strong><%= @post.user.name %></strong></p>
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+<div>  
+  <% if user_signed_in? && (current_user.id == @post.user_id) %>    
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
+    <%= link_to "Edit this post", edit_post_path(@post), class:"btn btn-dark btn-rounded"%> |
+
+    <%= link_to "Destroy this post", @post, data: { turbo_method: :delete }, class:"btn btn-danger btn-rounded" %> |
+   <% end %>
+   <%= link_to "Back to posts", posts_path, class:"btn btn-dark btn-rounded" %>
+
+
 </div>
