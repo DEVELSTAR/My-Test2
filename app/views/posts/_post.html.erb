@@ -14,5 +14,5 @@
     <%= post.content %>
   </p>
 
-  <!-- <p> created by: <strong><%#= @post.user.name %></strong></p> -->
+  <p> created by: <strong><%=link_to post.user.name, post %></strong></p>
 </div>
