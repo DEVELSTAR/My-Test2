@@ -20,6 +20,9 @@
       <ul class="navbar-nav ">
           <%= link_to "Create post", new_post_path, class: "nav-link"  %>
       </ul>
+      <ul class="navbar-nav ">
+          <%= link_to "My Followers", profile_follow_path, class: "nav-link"  %>
+      </ul>
       <ul class="navbar-nav ms-auto">
         <% if current_user %>
           <li class="nav-item dropdown">
